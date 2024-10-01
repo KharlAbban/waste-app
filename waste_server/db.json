@@ -1,0 +1,23 @@
+{
+  "users": [
+    {
+      "id": "ac23",
+      "address": "46 Prince Boateng St.",
+      "email": "abbanercarl@gmail.com",
+      "name": "Er-Carl Abban",
+      "password": "asdfghj",
+      "phone": "0200525006"
+    },
+    {
+      "id": "3cfd",
+      "address": "46 Prince Boateng St.",
+      "email": "abbanercarl@gmail.com",
+      "name": "Er-Carl Abban",
+      "password": "qwertyu",
+      "phone": "0200525006"
+    }
+  ],
+  "admins": [],
+  "complaints": [],
+  "requests": []
+}
