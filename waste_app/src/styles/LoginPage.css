@@ -1,0 +1,170 @@
+/* General Page Layout */
+.login-page {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+  }
+  
+  /* Background Image Styling */
+  .background-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Overlay to Darken the Background */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  
+  /* Header Section (Logo and Title) */
+  .header {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header svg {
+    fill: green;
+  }
+  
+  .title {
+    color: white;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  
+  /* Right Section (Login Form) */
+  .login-form {
+    position: relative;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .form-container {
+    background-color: green;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .avatar {
+    margin-top: 50px;
+    margin-bottom: 20px;
+  }
+  
+  .avatar-icon {
+    background-color: white;
+    border-radius: 50%;
+    width: 160px;
+    height: 160px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-title {
+    color: white;
+    font-size: 44px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  /* Input Fields */
+  input {
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+  }
+  
+  input:focus {
+    border: 2px solid #66bb6a;
+  }
+  
+  /* Forgot Password Link */
+  .forgot-password {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 20px;
+  }
+  
+  .forgot-password a {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  /* Login Button */
+  .custom-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #66bb6a;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .custom-button:hover {
+    background-color: #57a05c;
+  }
+  
+  /* Create Account Section */
+  .create-account {
+    display: flex;
+    align-items: center;
+  }
+  
+  .create-account span {
+    color: white;
+  }
+  
+  .create-account a {
+    color: white;
+    font-weight: 600;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  /* Footer Section */
+  .footer {
+    margin-top: auto;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+  }
+  
+  .footer p {
+    margin: 0;
+    line-height: 1.5;
+  }
+  
