@@ -1,7 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
-const CLERK_PUB_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
-if (!CLERK_PUB_KEY) throw new Error("Missing Clerk publishable key!");
 
 const AuthContext = createContext(undefined);
 

@@ -15,9 +15,26 @@
       "name": "Er-Carl Abban",
       "password": "qwertyu",
       "phone": "0200525006"
+    },
+    {
+      "id": "b786",
+      "address": "2324",
+      "email": "KwameBadu@gmail.com",
+      "name": "Kaden",
+      "password": "dfasdf",
+      "phone": "135465789"
     }
   ],
   "admins": [],
   "complaints": [],
-  "requests": []
+  "requests": [
+    {
+      "id": "b786",
+      "address": "2324",
+      "email": "KwameBadu@gmail.com",
+      "name": "Kaden",
+      "password": "dfasdf",
+      "phone": "135465789"
+    }
+  ]
 }
