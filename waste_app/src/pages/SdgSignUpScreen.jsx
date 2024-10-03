@@ -1,64 +1,84 @@
-import React from 'react';
-import './SdgSignUpScreen.css'; // Include your CSS file or use inline styles
-import googleIcon from 'path/to/google.png';
-import connectIcon from 'path/to/connect.png';
-import appleIcon from 'path/to/apple.png';
-import logo from 'path/to/logo2.svg';
-import CustomTextBox from './CustomTextBox'; // Your CustomTextBox Component
-import CustomPassword from './CustomPassword'; // Your CustomPassword Component
-import SdgButton from './SdgButton'; // Your Custom Button Component
-import ImagedButtons from './ImagedButtons'; // Your Image Button Component
+import React, { useState } from 'react';
+import './SdgSignUpScreen.css'; // Assume that you have a separate CSS file for styling
+import GoogleLogo from './assets/google.png'; //Replace with your Google logo
+import AppleLogo from './assets/apple.png'; //Replace with your Apple logo
+import { Dropdown } from 'react-bootstrap';
 
 const SdgSignUpScreen = () => {
-  return (
-    <div className="sign-up-screen">
-      {/* Background Image */}
-      <img className="background-img" src="path/to/new.png" alt="Background" />
+  const [selectedRegion, setSelectedRegion] = useState('');
+  const [selectedTown, setSelectedTown] = useState('');
 
-      {/* Overlay */}
+  const regions = ['Item1', 'Item2', 'Item3', 'Item4'];
+  const towns = ['Item1', 'Item2', 'Item3', 'Item4'];
+
+  return (
+    <div className="signup-container">
+      <div className="background-img">
+        <img src="assets/new.png" alt="background" />
+      </div>
       <div className="overlay">
-        <div className="header">
-          <img src={logo} alt="Logo" className="logo" />
-          <div className="header-text">
-            <h1>SUSTAINABLE<br />CITY</h1>
+        <div className="logo-section">
+          <img src="assets/logo2.svg" className="logo" alt="logo" />
+          <div className="logo-text">
+            <p>SUSTAINABLE<br />CITY</p>
           </div>
         </div>
-
         <div className="form-container">
-          <div className="form-box">
+          <div className="form-card">
             <h1 className="form-title">Sign Up</h1>
-
-            {/* Form Inputs */}
-            <div className="input-row">
-              <CustomTextBox hintText="Firstname" />
-              <CustomTextBox hintText="Lastname" />
+            <div className="form-row">
+              <input type="text" placeholder="Firstname" className="custom-input" />
+              <input type="text" placeholder="Lastname" className="custom-input" />
             </div>
-            <div className="input-row">
-              <CustomTextBox hintText="Username" />
-              <CustomTextBox hintText="Telephone" />
+            <div className="form-row">
+              <input type="text" placeholder="Username" className="custom-input" />
+              <input type="text" placeholder="Telephone" className="custom-input" />
             </div>
-            <div className="input-row">
-              <CustomPassword hintText="Password" />
-              <CustomPassword hintText="Repeat Password" />
+            <div className="form-row">
+              <input type="password" placeholder="Password" className="custom-input" />
+              <input type="password" placeholder="Repeat Password" className="custom-input" />
             </div>
-
-            {/* Button */}
-            <div className="button-container">
-              <SdgButton btnName="CREATE ACCOUNT" onClick={() => {}} color="#1A237E" />
+            <div className="form-row">
+              <Dropdown>
+                <Dropdown.Toggle variant="white" className="dropdown-toggle">
+                  {selectedRegion || 'Region'}
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                  {regions.map((region, index) => (
+                    <Dropdown.Item key={index} onClick={() => setSelectedRegion(region)}>
+                      {region}
+                    </Dropdown.Item>
+                  ))}
+                </Dropdown.Menu>
+              </Dropdown>
+              <Dropdown>
+                <Dropdown.Toggle variant="white" className="dropdown-toggle">
+                  {selectedTown || 'Town'}
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                  {towns.map((town, index) => (
+                    <Dropdown.Item key={index} onClick={() => setSelectedTown(town)}>
+                      {town}
+                    </Dropdown.Item>
+                  ))}
+                </Dropdown.Menu>
+              </Dropdown>
             </div>
-
-            {/* Divider and Login Options */}
-            <div className="login-divider">
-              <hr />
-              <span>Log In Using</span>
-              <hr />
+            <button className="custom-button">CREATE ACCOUNT</button>
+            <div className="divider-section">
+              <hr className="divider" />
+              <p className="divider-text">Log In Using</p>
+              <hr className="divider" />
             </div>
-
-            {/* Social Media Buttons */}
             <div className="social-buttons">
-              <ImagedButtons imgName={googleIcon} onClick={() => {}} text="Google" />
-              <ImagedButtons imgName={connectIcon} onClick={() => {}} text="Connect" />
-              <ImagedButtons imgName={appleIcon} onClick={() => {}} text="Apple" />
+              <button className="image-button">
+                <img src={GoogleLogo} alt="Google" />
+                Google
+              </button>
+              <button className="image-button">
+                <img src={AppleLogo} alt="Apple" />
+                Apple
+              </button>
             </div>
           </div>
         </div>

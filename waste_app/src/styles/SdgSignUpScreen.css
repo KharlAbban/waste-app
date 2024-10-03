@@ -1,97 +1,184 @@
-.sign-up-screen {
+/* Main container for the whole screen */
+.signup-container {
     position: relative;
     width: 100%;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0e0e0; /* Similar to Colors.grey[300] in Flutter */
   }
   
-  .background-img {
+  /* Background image styling */
+  .background-img img {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: -1;
+    z-index: -2;
   }
   
+  /* Dark overlay to create transparency over the background image */
   .overlay {
     background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
   }
   
-  .header {
+  /* Logo section */
+  .logo-section {
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding: 8px;
     color: white;
   }
   
   .logo {
     width: 100px;
     height: 100px;
+    fill: #1a237e; /* Logo color */
   }
   
-  .header-text h1 {
+  .logo-text p {
+    font-family: 'Ubuntu', sans-serif;
     font-size: 32px;
     font-weight: 600;
+    color: white;
     margin-left: 20px;
+    line-height: 1.2;
   }
   
+  /* Form container */
   .form-container {
+    width: 100%;
+    max-width: 800px;
+    padding: 40px;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 80px;
   }
   
-  .form-box {
-    background-color: #1A237E;
-    border-radius: 20px;
+  .form-card {
+    background-color: #1a237e; /* Same as Color(0xFF1A237E) */
     padding: 40px;
-    text-align: center;
-    color: white;
+    border-radius: 20px;
+    width: 100%;
   }
   
   .form-title {
+    font-family: 'Poppins', sans-serif;
+    color: white;
     font-size: 48px;
     font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
   }
   
-  .input-row {
+  /* Input fields */
+  .form-row {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-top: 15px;
+    margin-bottom: 15px;
   }
   
-  .button-container {
-    margin-top: 25px;
+  .custom-input {
+    width: 48%;
+    padding: 10px;
+    margin: 8px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
   }
   
-  .login-divider {
+  /* Button styling */
+  .custom-button {
+    width: 100%;
+    background-color: white;
+    color: #1a237e;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  /* Dropdown styling */
+  .dropdown-toggle {
+    width: 48%;
+    padding: 10px;
+    margin: 8px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: white;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .dropdown-menu {
+    width: 100%;
+  }
+  
+  /* Divider section */
+  .divider-section {
     display: flex;
     align-items: center;
-    margin-top: 15px;
+    margin-top: 30px;
+    margin-bottom: 20px;
   }
   
-  .login-divider hr {
+  .divider {
     flex: 1;
-    border-color: white;
     height: 1px;
+    background-color: white;
   }
   
-  .login-divider span {
-    margin: 0 10px;
+  .divider-text {
     color: white;
+    margin: 0 15px;
+    font-size: 16px;
   }
   
+  /* Social buttons */
   .social-buttons {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .image-button {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+  }
+  
+  .image-button img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+  }
+  
+  .image-button:hover {
+    background-color: #e0e0e0;
   }
   
