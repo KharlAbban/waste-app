@@ -1,0 +1,25 @@
+.custom-button {
+    width: 15%;
+    height: 50px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-button:hover {
+    background-color: #f0f0f0; /* Light grey hover effect */
+  }
+  
+  .button-text {
+    color: green;
+    font-size: 18px;
+    font-weight: 600;
+    word-spacing: 1px;
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+  

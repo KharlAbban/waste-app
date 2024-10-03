@@ -1,0 +1,33 @@
+/* Root container with a light grey background */
+.signup-screen {
+    background-color: #f0f0f0; /* Equivalent to Colors.grey[200] */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full-screen height */
+  }
+  
+  /* The main signup box with rounded corners and green background */
+  .signup-container {
+    background-color: green;
+    border-radius: 20px;
+    padding: 80px;
+    text-align: center;
+  }
+  
+  /* Header styling for the signup text */
+  .signup-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .signup-title {
+    color: white;
+    font-size: 48px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+  }
+  
